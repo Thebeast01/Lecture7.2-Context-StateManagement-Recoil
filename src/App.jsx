@@ -2,7 +2,7 @@ import { useContext, useMemo, useState } from "react"
 import { CountContext } from "./context";
 import { RecoilRoot, useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { countAtom, evenSelector } from "./store/atoms/count";
-
+import './App.css';
 function App() {
   return (
     <div>
@@ -23,7 +23,7 @@ function Count() {
 
 function CountRenderer() {
   const count = useRecoilValue(countAtom);
-  
+
   return <div>
     <b>
       {count}
