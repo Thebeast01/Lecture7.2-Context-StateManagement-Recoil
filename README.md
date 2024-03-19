@@ -115,14 +115,14 @@ Lets compare it with the useState hook and see what's the difference :
 `const [count , setCount] = useState(0);`
 
 1. `useRecoilValue()` : Now here `useRecoilValue()` gives you only the `count` part of the above code , means it will only return the varible part of the value :
-   SYNTAX
-   `const count  = useRecoilValue(countAtom)`
+   SYNTAX <br/>
+   `const count  = useRecoilValue(countAtom)`<br/>
 2. `useRecoilState()` : It give you both the variable and the setState function :
-   SYNTAX :
-   `const [count , setCount] = useRecoilState(counterAtom)`
+   SYNTAX :<br/>
+   `const [count , setCount] = useRecoilState(counterAtom)`<br/>
 3. `useSetRecoilState() ` : Ths hook allows you to write to a recoil state atom without readnig it. It returns a setter function to update the attom's 	value. This hook is useful when you only need to write to the atom and don't want to trigger a re-render when the atom's value changes :
    SYNTAX :
-	`const setCount = useSetRecoilState(counterAtom)`
+   `const setCount = useSetRecoilState(counterAtom)`
 
 # Syntax for using useRecoilValue :
 
@@ -177,5 +177,3 @@ function App() {
 ```
 
 ---
-
-
