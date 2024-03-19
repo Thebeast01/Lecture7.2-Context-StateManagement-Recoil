@@ -129,8 +129,8 @@ Lets compare it with the useState hook and see what's the difference :
 
 ### First Run the following command to install recoil into the application :
 
-` npm install recoil`
-importing the `useRecoilValue` hook
+` npm install recoil` <br/>
+importing the `useRecoilValue` hook<br/>
 
 ```jsx
 import { useRecoilValue } from 'recoil';
