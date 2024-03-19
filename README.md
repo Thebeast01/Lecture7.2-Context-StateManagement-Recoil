@@ -23,7 +23,9 @@ const countAtom = atom ({
 })
 export default countAtom
 ```
+
 ---
+
 # useRecoilState :
 
 This is used in place of useState hook into the code :
@@ -106,7 +108,21 @@ export default App;
 
 ## What is `useRecoilValue` ?
 
--- It is used to access and retrive the value from the recoil state,
+It is used to access and retrive the value from the recoil state,
+Since `recoil` gives us three hooks :
+
+Lets compare it with the useState hook and see what's the difference :
+`const [count , setCount] = useState(0);`
+
+1. `useRecoilValue()` : Now here `useRecoilValue()` gives you only the `count` part of the above code , means it will only return the varible part of the value :
+   SYNTAX
+   `const count  = useRecoilValue(countAtom)`
+2. `useRecoilState()` : It give you both the variable and the setState function :
+   SYNTAX :
+   `const [count , setCount] = useRecoilState(counterAtom)`
+3. `useSetRecoilState() ` : Ths hook allows you to write to a recoil state atom without readnig it. It returns a setter function to update the attom's 	value. This hook is useful when you only need to write to the atom and don't want to trigger a re-render when the atom's value changes :
+   SYNTAX :
+	`const setCount = useSetRecoilState(counterAtom)`
 
 # Syntax for using useRecoilValue :
 
@@ -137,37 +153,29 @@ const value = useRecoilValue(counterState);
 
 ---
 
-
 ## Using the retrieved value in the component
 
 ```jsx
-
-return (
-  <>
-    The counter is {value}
-  </>
-)
-
+return <>The counter is {value}</>;
 ```
+
 ---
 
 # In order to use all these
+
 You need to wrap the application into the `<RecoilRoot>`;
 
 ```jsx
-  import {React} from 'react'
-  import {RecoilRoot} from 'recoil';
+import { React } from 'react';
+import { RecoilRoot } from 'recoil';
 
-  function App() {
-    // ... logical code :
+function App() {
+	// ... logical code :
 
-    return (
-      <RecoilRoot>
-      {/* You components here  */}
-
-      </RecoilRoot>
-    )
-
-  }
-
+	return <RecoilRoot>{/* You components here  */}</RecoilRoot>;
+}
 ```
+
+---
+
+
