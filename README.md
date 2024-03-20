@@ -120,9 +120,10 @@ Lets compare it with the useState hook and see what's the difference :
 2. `useRecoilState()` : It give you both the variable and the setState function :
    SYNTAX :<br/>
    `const [count , setCount] = useRecoilState(counterAtom)`<br/>
-3. `useSetRecoilState() ` : Ths hook allows you to write to a recoil state atom without readnig it. It returns a setter function to update the attom's 	value. This hook is useful when you only need to write to the atom and don't want to trigger a re-render when the atom's value changes :<br/>
+3. `useSetRecoilState() ` : Ths hook allows you to write to a recoil state atom without readnig it. It returns a setter function to update the attom's value. This hook is useful when you only need to write to the atom and don't want to trigger a re-render when the atom's value changes :<br/>
    SYNTAX :<br/>
    `const setCount = useSetRecoilState(counterAtom)`<br/>
+
 ---
 
 # Syntax for using useRecoilValue :
@@ -162,7 +163,7 @@ return <>The counter is {value}</>;
 
 ---
 
-# In order to use all these
+### In order to use all these
 
 You need to wrap the application into the `<RecoilRoot>`;
 
@@ -178,3 +179,4 @@ function App() {
 ```
 
 ---
+
