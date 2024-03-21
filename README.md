@@ -194,3 +194,12 @@ const variableName = selector ( {
 ```
 You can also use the react hook  `useMemo() ` instead of selector :
 
+You can also write the  `get` part of the code something like this :
+
+```jsx
+get : (props) => {
+	const count = props.get(textState);
+	return  count. lenght;
+}
+```
+
