@@ -185,10 +185,12 @@ A selector represents a piece of derived state. Derived State is a transformatio
 
 ```jsx
 const variableName = selector ( {
-	key : 'variableName',
+	key : 'variableName', // Unique id :
 	get : ({get}) => {
-		const text = get (textState) ;
+		const text = get (textState) ; // Here we will pass on which the variableName is depending : in this case it's textstate :
 		return text.lenght;
 	}
 });
 ```
+You can also use the react hook  `useMemo() ` instead of selector :
+
