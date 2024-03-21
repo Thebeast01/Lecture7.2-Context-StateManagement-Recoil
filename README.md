@@ -180,3 +180,15 @@ function App() {
 
 ---
 
+# Selectors :
+A selector represents a piece of derived state. Derived State is a transformation of state. You can think of derived state as the output of passing state to a pure function that modifies the given state in some way :
+
+```jsx
+const variableName = selector ( {
+	key : 'variableName',
+	get : ({get}) => {
+		const text = get (textState) ;
+		return text.lenght;
+	}
+});
+```

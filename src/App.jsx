@@ -44,15 +44,25 @@ function Buttons() {
   const setCount = useSetRecoilState(countAtom);
   console.log("buttons re-rendererd");
 
-  return <div>
-    <button onClick={() => {
-      setCount(count => count + 1)
-    }}>Increase</button>
+  return (
+		<div>
+			<button
+				onClick={() => {
+					setCount((count) => count + 1);
+				}}
+			>
+				Increase
+			</button>
 
-    <button onClick={() => {
-      setCount(count => count - 1)
-    }}>Decrease</button>
-  </div>
+			<button
+				onClick={() => {
+					setCount((count) => count - 1);
+				}}
+			>
+				Decrease
+			</button>
+		</div>
+  );
 }
 
 export default App
